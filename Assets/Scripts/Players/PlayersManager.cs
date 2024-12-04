@@ -6,7 +6,7 @@ namespace Players
     public class PlayersManager : MonoBehaviour
     {
         public static PlayersManager Instance { get; private set; }
-        public List<Player> Players { get; set; }
+        public List<Player> Players { get; set; } = new();
         
         // Singleton
         private void Awake()
