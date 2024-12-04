@@ -1,12 +1,16 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
+using System.Collections.Generic;
 
 public class Scenetransition : MonoBehaviour
 {
-    public void LoadScene(string sceneName)
+    public void ChangeScene(string sceneName)
     {
         if (!string.IsNullOrEmpty(sceneName))
         {
+            Console.Write("Got here");
             SceneManager.LoadScene(sceneName);
         }
         else
