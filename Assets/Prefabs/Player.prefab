@@ -91,6 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNameText: {fileID: 7004874890573152263}
+  button: {fileID: 2601922836942908393}
 --- !u!1 &2017606282555945528
 GameObject:
   m_ObjectHideFlags: 0

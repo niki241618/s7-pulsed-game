@@ -4,6 +4,8 @@ using UnityEngine;
 public class PlayerDisplay : MonoBehaviour
 {
     public GameObject playerPrefab;
+    
+    [SerializeField] private PlayersHandler playersHandler;
 
     private void Start()
     {
@@ -25,7 +27,9 @@ public class PlayerDisplay : MonoBehaviour
         foreach (var player in playersManager.Players)
         {
             var playerObject = Instantiate(playerPrefab, transform);
-            playerObject.GetComponent<PlayerInfo>().SetPlayer(player);
+            var playerInfo = playerObject.GetComponent<PlayerInfo>();
+            playerInfo.SetPlayer(player);
+            playerInfo.deleteButton.onClick.AddListener(() => playersHandler.DeletePlayer(player.Id));
         }
     }
 }
