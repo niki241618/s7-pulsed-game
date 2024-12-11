@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using GameScripts;
 using UnityEngine;
 
 namespace Players
@@ -7,6 +8,7 @@ namespace Players
     {
         public static PlayersManager Instance { get; private set; }
         public List<Player> Players { get; set; } = new();
+        public Category? CurrentCategory { get; set; } = null;
         
         // Singleton
         private void Awake()

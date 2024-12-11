@@ -10,6 +10,8 @@ public class PlayersHandler : MonoBehaviour
    
    [SerializeField]
    private TMP_InputField playerNameInputField;
+
+   [SerializeField] private Button startButton;
    
    [SerializeField]
    private PlayerDisplay playerDisplay;
@@ -33,7 +35,12 @@ public class PlayersHandler : MonoBehaviour
          playersManager.Players.Add(player);
          playerNameInputField.text = string.Empty;
       }
-      
+
+      if (playersManager.Players.Count > 0)
+      {
+         startButton.interactable = true;
+      }
+
       if (playersManager.Players.Count >= MaxPeople)
       {
          playerCreator.SetActive(false);
@@ -50,6 +57,11 @@ public class PlayersHandler : MonoBehaviour
       if(playersManager.Players.Count < MaxPeople)
       {
          playerCreator.SetActive(true);
+      }
+      
+      if (playersManager.Players.Count < 1)
+      {
+         startButton.interactable = false;
       }
    }
 }
