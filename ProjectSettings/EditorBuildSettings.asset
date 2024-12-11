@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameLength.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/SelectPlayersSceen.unity
+    guid: 8e73be544b2754196b641f1705c5b587
+  - enabled: 1
+    path: Assets/Scenes/Select category scene/Select Category Scene.unity
+    guid: dee33f2459fea40abb5df0e3c37ccdba
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 5a82f39e93331453398ab1a7dadcfdcc, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
