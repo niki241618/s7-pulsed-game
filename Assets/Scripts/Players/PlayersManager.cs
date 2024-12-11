@@ -7,7 +7,7 @@ namespace Players
     {
         public static PlayersManager Instance { get; private set; }
         public List<Player> Players { get; set; }
-        public GameLength GameLength { get; set; }
+        public GameSettings GameSettingsInstance { get; set; }
         
         // Singleton
         private void Awake()
