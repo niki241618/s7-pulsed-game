@@ -9,36 +9,50 @@ namespace GameScripts
     {
         [SerializeField] private FortuneWheel fortuneWheel;
         [SerializeField] private TMP_Text currentPlayerText;
+        [SerializeField] private TMP_Text currentRoundText;
 
         private SceneTransition sceneTransition;
-        
         private PlayersManager playersManager;
-        private Round round = new();
 
         private void Start()
         {
             playersManager = PlayersManager.Instance;
             sceneTransition = GetComponent<SceneTransition>();
-            
-            playersManager.CurrentRound = round;
+
             // Test add players for debug
-            
+
             playersManager.Players.Add(new Player("Nikolay"));
             playersManager.Players.Add(new Player("Stoyan"));
             playersManager.Players.Add(new Player("Martin"));
             playersManager.Players.Add(new Player("Yoanna"));
-            
+
             // End test
+
+            var round = playersManager.CurrentRound ??= new Round(playersManager.Players);
             
-            round.Players = playersManager.Players.ToArray();
+            if (round.IsOver)
+            {
+                if (round.RoundNumber + 1 >= (int)playersManager.GameLength)
+                {
+                    // End of the game. Yay
+                    sceneTransition.ChangeScene("EndGameScene");
+                    return;
+                }
+
+                var newRound = round.NewRound();
+                
+                playersManager.CurrentRound = newRound;
+                round = newRound;
+            }
+            
             currentPlayerText.text = round.CurrentPlayer.Name;
+            currentRoundText.text = $"Round {round.RoundNumber + 1}";
             fortuneWheel.OnSpinComplete?.AddListener(CategorySelected);
         }
 
         private void CategorySelected(Category category)
         {
-            Debug.Log(category);
-            round.NewTurn(category);
+            playersManager.CurrentRound.NewTurn(category);
             sceneTransition.ChangeScene("PlayerTurnScene");
         }
     }
