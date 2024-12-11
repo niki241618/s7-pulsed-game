@@ -8,8 +8,7 @@ namespace Players
     {
         public static PlayersManager Instance { get; private set; }
         public List<Player> Players { get; set; } = new();
-        public Category? CurrentCategory { get; set; } = null;
-        
+        public Round CurrentRound { get; set; }
         // Singleton
         private void Awake()
         {
