@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
-public class Scenetransition : MonoBehaviour
+public class SceneTransition : MonoBehaviour
 {
     public void ChangeScene(string sceneName)
     {

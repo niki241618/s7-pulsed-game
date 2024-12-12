@@ -13,28 +13,35 @@ public class FortuneWheel : MonoBehaviour
     public Transform wheelTransform; // Reference to the wheel's Transform
     public float spinDuration = 3.0f; // Duration of the spin in seconds
     public float spinSpeed = 500.0f; // Base spin speed
-    public UnityEvent OnSpinComplete { get; private set; }
+    public UnityEvent<Category> OnSpinComplete { get; private set; }
 
     // Get all categories.
     private readonly Category[] categories = { Category.DeepDives, Category.FutureYou, Category.ClicksAndGiggles, Category.MindMatters };
+    private bool wheelIsSpinning;
 
     private void Awake()
     {
-        OnSpinComplete = new UnityEvent();
+        OnSpinComplete = new UnityEvent<Category>();
     }
     
     public void SpinWheel()
     {
+        if(wheelIsSpinning)
+            return;
+        
         StartCoroutine(SpinAndSelect());
     }
 
     private IEnumerator SpinAndSelect()
     {
+        wheelIsSpinning = true;
         float elapsedTime = 0f;
-        float spinSpeedWithOffset = spinSpeed + Random.Range(0f, 100f);
+        float spinSpeedWithOffset = spinSpeed + Random.Range(100f, 400f);
+        
         float currentSpeed = spinSpeedWithOffset;
+        float duration = spinDuration + Random.Range(0f, 3f);
 
-        while (elapsedTime < spinDuration)
+        while (elapsedTime < duration)
         {
             float deltaTime = Time.deltaTime;
             elapsedTime += deltaTime;
@@ -43,7 +50,7 @@ public class FortuneWheel : MonoBehaviour
             wheelTransform.Rotate(0, 0, -currentSpeed * deltaTime);
 
             // Gradually slow down the spin
-            currentSpeed = Mathf.Lerp(spinSpeedWithOffset, 0, elapsedTime / spinDuration);
+            currentSpeed = Mathf.Lerp(spinSpeedWithOffset, 0, elapsedTime / duration);
 
             yield return null;
         }
@@ -52,12 +59,8 @@ public class FortuneWheel : MonoBehaviour
         float finalAngle = wheelTransform.eulerAngles.z;
         int selectedIndex = Mathf.FloorToInt((finalAngle % 360f) / segmentAngle) % categories.Length;
 
-        // Correct the final angle to align exactly
-        // float correctedAngle = selectedIndex * segmentAngle;
-        // wheelTransform.eulerAngles = new Vector3(0, 0, correctedAngle);
-
-        PlayersManager.Instance.CurrentCategory = categories[selectedIndex];
-        OnSpinComplete?.Invoke();
+        wheelIsSpinning = false;
+        OnSpinComplete?.Invoke(categories[selectedIndex]);;
     }
 }
 
