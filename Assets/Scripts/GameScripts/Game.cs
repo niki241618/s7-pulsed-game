@@ -24,7 +24,7 @@ namespace GameScripts
             playersManager.Players.Add(new Player("Nikolay"));
             playersManager.Players.Add(new Player("Stoyan"));
             playersManager.Players.Add(new Player("Martin"));
-            playersManager.Players.Add(new Player("Yoanna"));
+            playersManager.Players.Add(new Player("Yoana"));
 
             // End test
 

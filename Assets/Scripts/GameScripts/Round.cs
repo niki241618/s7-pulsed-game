@@ -8,34 +8,28 @@ namespace GameScripts
 {
     public class Round
     {
-        public Player[] Players { get; set; }
+        public List<Player> Players { get; set; }
         public int CurrentPlayerIndex { get; private set; }
         public Player CurrentPlayer => Players[CurrentPlayerIndex];
-        public bool IsOver => CurrentPlayerIndex >= Players.Length;
+        public bool IsOver => CurrentPlayerIndex >= Players.Count;
         public Turn Turn { get; private set; }
         public int RoundNumber { get; set; }
-        
-        private Dictionary<Guid, int> playerScores = new();
         
         public Round()
         {
         }
 
-        public Round(Player[] players)
-        {
-            Players = players;
-        }
-
         public Round(IEnumerable<Player> players)
         {
-            Players = players.ToArray();
+            Players = players.ToList();
         }
 
         public void NewTurn(Category category)
         {
             Turn = new Turn(CurrentPlayer, Questions.QuestionForCategory(category));
-            CurrentPlayerIndex = Math.Min(CurrentPlayerIndex + 1, Players.Length);
+            CurrentPlayerIndex = Math.Min(CurrentPlayerIndex + 1, Players.Count);
         }
+        
         
         public Round NewRound()
         {
