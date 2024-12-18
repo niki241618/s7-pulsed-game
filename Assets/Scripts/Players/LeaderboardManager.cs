@@ -18,22 +18,7 @@ public class LeaderboardManager : MonoBehaviour
         //Use this code when you are done with testing to see if player data is pulled
 
         //PlayerLists = PlayersManager.Instance.Players;
-
-
-        //This is test code, use it to check whether the leaderboard loads in correctly
-
-        Player player1 = new Player("Yoana");
-        player1.Score = UnityEngine.Random.Range(1, 25);
-        Player player2 = new Player("Nikolay");
-        player2.Score = UnityEngine.Random.Range(1, 25);
-        Player player3 = new Player("Stoyan");
-        player3.Score = UnityEngine.Random.Range(1, 25);
-        Player player4 = new Player("Martin");
-        player4.Score = UnityEngine.Random.Range(1, 25);
-        PlayerLists.Add(player1);
-        PlayerLists.Add(player2);
-        PlayerLists.Add(player3);
-        PlayerLists.Add(player4);
+        
         PlayerLists.Sort((p1, p2) => p2.Score.CompareTo(p1.Score));
         PlayerList = PlayerLists.ToArray();
 

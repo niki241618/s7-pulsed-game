@@ -6,26 +6,26 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: da0ee7a083b154177bfb27a53963a076
+  - enabled: 1
     path: Assets/Scenes/GameLength.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    guid: 1b7f5c7f0bbe243dba437b3a7ea2675a
   - enabled: 1
     path: Assets/Scenes/SelectPlayersSceen.unity
     guid: 8e73be544b2754196b641f1705c5b587
   - enabled: 1
     path: Assets/Scenes/Select category scene/Select Category Scene.unity
-    guid: af2f80c51fba8004994486af63879aaf
+    guid: dee33f2459fea40abb5df0e3c37ccdba
   - enabled: 1
     path: Assets/Scenes/PlayerTurnScene.unity
-    guid: 6fe5e555f8809aa4fb7a2b9270e8241d
+    guid: 71f676d2d39c04a1b959db40c3b79506
   - enabled: 1
     path: Assets/Scenes/EndGameScene.unity
-    guid: f27261ce93c843f4ea052f7ce6839e54
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: cf4ea0b812f5cb047a283f0c8a4339da
+    guid: 3d297d861128b45c7a380e6bbaab1cfd
   - enabled: 1
     path: Assets/Scenes/LeaderBoard.unity
-    guid: de344b1399d7458488b25bd069694ac3
+    guid: ed07c31a4185d4388a6486fd0fffc071
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 5a82f39e93331453398ab1a7dadcfdcc, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

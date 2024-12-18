@@ -9,47 +9,39 @@ namespace GameScripts
             {
                 Category.MindMatters, new[] 
                 {
-                    "What’s one thing you do to cheer yourself up on a tough day?",
-                    "Who is someone you feel comfortable talking to about your feelings, and why?", 
-                    "What’s a stress-relief activity you’ve always wanted to try but haven’t yet?",
-                    "What’s a challenge you faced recently, and how did you overcome it?",
-                    "What advice would you give to someone feeling nervous about something?",
-                    "What’s a piece of advice you’ve received that really stuck with you?",
-                }
-            },
-            {
-                Category.DeepDives, new[]
-                {
-                    "What’s a subject or topic you secretly love, even if it’s not your favorite class?",
-                    "How do you usually prepare for an important test or project?",
-                    "If you could change one thing about your school, what would it be?",
-                    "What do you think is the most important quality in a good person?",
-                    "If you could change one thing about the world, what would it be?",
-                    "What do you think makes life meaningful?",
+                    "Wat doe jij om jezelf op te vrolijken als je een slechte dag hebt?",
+                    "Wie is iemand bij wie je je echt fijn voelt om over je gevoelens te praten, en waarom?", 
+                    "Wat is iets wat je zou willen doen om te ontspannen, maar nog nooit hebt geprobeerd",
+                    "Wat is een uitdaging die je laatst hebt meegemaakt, en hoe heb je die aangepakt?",
                 }
             },
             {
                 Category.ClicksAndGiggles, new[]
                 {
-                    "What’s the funniest meme or trend you’ve seen recently?",
-                    "If you could meet any celebrity or influencer, who would it be and why?",
-                    "What’s one song or playlist you keep on repeat these days?",
-                    "What’s one song or playlist you keep on repeat these days?",
-                    "If you could have any superpower for a day, what would it be and why?",
-                    "What’s the most unusual food you’ve ever tried or want to try?",
-                    "If you could invent a holiday, what would people celebrate and how?",
-                    "What’s your favorite thing about social media, and what’s something you dislike?",
+                    "Wat is de grappigste meme of trend die je recent hebt gezien?",
+                    "Als je één beroemdheid of influencer zou kunnen ontmoeten, wie zou het zijn en waarom?",
+                    "Wat is één lied of playlist die je de laatste tijd steeds op repeat zet?",
+                    "Als je één superkracht voor een dag zou kunnen hebben, welke zou het zijn en waarom?",
+                }
+            },
+            {
+                Category.DeepDives, new[]
+                {
+                    "Wat is een onderwerp of iets waar je stiekem van houdt, ook al is het niet je favoriete vak?",
+                    "Hoe bereid je je meestal voor op een belangrijke toets of project?",
+                    "Als je één ding aan je school zou kunnen veranderen, wat zou het dan zijn??",
+                    "Wat denk je dat de belangrijkste eigenschap is van een goed persoon?",
+                    "Als je één ding aan de wereld zou kunnen veranderen, wat zou het dan zijn?",
+                    "Wat denk je dat het leven betekenisvol maakt?"
                 }
             },
             {
                 Category.FutureYou, new[]
                 {
-                    "What’s a skill you’d like to learn in the next year?",
-                    "Imagine your ideal job or hobby in the future. What would it be?",
-                    "What motivates you to keep working toward your goals?",
-                    "What’s one thing about yourself that you’re really proud of?",
-                    "How do you usually express yourself when you’re feeling creative?",
-                    "If you could design a T-shirt to represent your personality, what would it look like?"
+                    "Welke skill zou je graag willen leren in het komende jaar?",
+                    "Stel je voor dat je je ideale baan of hobby hebt in de toekomst. Hoe zou dat eruitzien?",
+                    "Wat zorgt ervoor dat je door blijft gaan met je doelen?",
+                    "Wat is één ding waar je echt trots op bent aan jezelf?"
                 }
             }
         };

@@ -18,16 +18,7 @@ namespace GameScripts
         {
             playersManager = PlayersManager.Instance;
             sceneTransition = GetComponent<SceneTransition>();
-
-            // Test add players for debug
-
-            playersManager.Players.Add(new Player("Nikolay"));
-            playersManager.Players.Add(new Player("Stoyan"));
-            playersManager.Players.Add(new Player("Martin"));
-            playersManager.Players.Add(new Player("Yoana"));
-
-            // End test
-
+            
             var round = playersManager.CurrentRound ??= new Round(playersManager.Players);
             
             if (round.IsOver)
