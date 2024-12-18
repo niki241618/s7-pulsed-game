@@ -8,7 +8,6 @@ namespace Players
     {
         public static PlayersManager Instance { get; private set; }
         public List<Player> Players { get; set; } = new();
-        public GameSettings GameSettingsInstance { get; set; }
         public Round CurrentRound { get; set; }
         public GameSettings.GameLength GameLength { get; set; } = GameSettings.GameLength.Medium;
         

@@ -35,7 +35,7 @@ namespace GameScripts
                 if (round.RoundNumber + 1 >= (int)playersManager.GameLength)
                 {
                     // End of the game. Yay
-                    sceneTransition.ChangeScene("EndGameScene");
+                    sceneTransition.ChangeScene("LeaderBoard");
                     return;
                 }
 

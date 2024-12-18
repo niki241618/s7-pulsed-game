@@ -10,7 +10,6 @@ public class SceneTransition : MonoBehaviour
     {
         if (!string.IsNullOrEmpty(sceneName))
         {
-            Console.Write("Got here");
             SceneManager.LoadScene(sceneName);
         }
         else
