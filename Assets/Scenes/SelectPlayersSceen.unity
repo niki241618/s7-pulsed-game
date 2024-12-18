@@ -215,6 +215,18 @@ MonoBehaviour:
           m_StringArgument: Select Category Scene
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 486387749}
+        m_TargetAssemblyTypeName: SceneTransition, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Select Category Scene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &60519803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,6 +392,7 @@ GameObject:
   m_Component:
   - component: {fileID: 486387748}
   - component: {fileID: 486387747}
+  - component: {fileID: 486387749}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -414,6 +427,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &486387749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486387746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df8e74df9185ebe478921e23f8bbafea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &834193557
 GameObject:
   m_ObjectHideFlags: 0
@@ -1221,8 +1246,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86b40fb61c91f4923894f91a3c82c954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 1353989251445206613, guid: 884bf395524d842c894ae44683dc69a7, type: 3}
-  playersHandler: {fileID: 1719714249}
 --- !u!114 &1335964411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1351,9 +1374,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eabf185ce0a3046b8ac28c2ca447db41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNameInputField: {fileID: 1091497745}
-  startButton: {fileID: 60519802}
-  playerDisplay: {fileID: 1335964410}
 --- !u!1 &1816178194
 GameObject:
   m_ObjectHideFlags: 0
